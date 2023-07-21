@@ -25,20 +25,20 @@ impl BitwiseOperative for usize {
         }
     }
     fn count_one(&self) -> usize {
-        let bits = std::mem::size_of::<usize>() * 8;
+        let bits = std::mem::size_of::<Self>() * 8;
         let mut count = 0;
         for i in 0..bits {
-            if self & (1 << i) != 0 {
+            if *self & (1 << i) != 0 {
                 count += 1;
             }
         }
         count
     }
     fn count_zero(&self) -> usize {
-        let bits = std::mem::size_of::<usize>() * 8;
+        let bits = std::mem::size_of::<Self>() * 8;
         let mut count = 0;
         for i in 0..bits {
-            if self & (1 << i) == 0 {
+            if *self & (1 << i) == 0 {
                 count += 1;
             }
         }
