@@ -1,0 +1,5 @@
+{
+  "cSpell.words": ["rlox"],
+  "rust-analyzer.check.command": "clippy",
+  "editor.tabSize": 2
+}
